@@ -1,0 +1,21 @@
+# Configuración de modelos y directorios
+classModelDir: ./models/classification/ResNet101_classification.keras
+bboxModelDir: ./models/BBox/Mobilenet_BBox/saved_model
+channelModelDir: ./models/segmentation/channelUnet.keras
+segmentationModelDir: ./models/segmentation/cellUnet.keras
+
+# Directorios de entrada/salida
+imDir: ./images
+outputDir: ./Results
+
+# Parámetros de procesamiento
+# si startImgNum y endImgNum son ambos 0, se trabajará con todas las imágenes
+startImgNum: 0
+endImgNum: 12000
+batchSize: 32
+
+# Puntajes de corte
+classificationThreshold: 0.4
+cellSegmentationThreshold: 0.55
+channelSegmentationThreshold: 0.15
+BBoxThreshold: 0.1
